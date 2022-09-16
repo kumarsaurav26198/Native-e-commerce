@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1028679670064",
+    "project_id": "reactnativeauth-bb27d",
+    "storage_bucket": "reactnativeauth-bb27d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1028679670064:android:a6d335dd5ec5810ca650f5",
+        "android_client_info": {
+          "package_name": "com.chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1028679670064-1ltubq6elqia8t8kt4336hfe101vh7he.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.chat",
+            "certificate_hash": "24b1b204ec50afc768a12193718f4d869bc87dad"
+          }
+        },
+        {
+          "client_id": "1028679670064-6j8ar32uutjtnena6uqm9n5esk00qjht.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFNPJoAO7sBA6yrdjvUE2KDJirVHrFLrM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1028679670064-6j8ar32uutjtnena6uqm9n5esk00qjht.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
