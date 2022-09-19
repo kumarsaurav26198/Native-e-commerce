@@ -1,7 +1,11 @@
-import HomeScreen from "./HomeScreen/HomeScreen ";
-import profileScreen from "./profileScreen/ProfileScreen";
+import ProductScreen from "./productScreen/ProductScreen";
+import ProductDetails from "./productDetails/ProductDetails";
+// import ShoppingCartScreen from "./shoppingCartScreen/ShoppingCartScreen";
+// import LoactionScreen from "./loactionScreen/LoactionScreen";
 
 export default {
-    HomeScreen,
-    profileScreen
+    ProductScreen,
+    ProductDetails,
+    // ShoppingCartScreen,
+    // LoactionScreen
 };
