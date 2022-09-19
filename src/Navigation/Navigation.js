@@ -5,12 +5,12 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import SignUp from '../Screens/SignUp';
 import Login from '../Screens/Login';
 import Dashboard from '../Screens/Dashboard';
-// import { ProductScreen, ProductDetails } from '../pages/index';
 import ProductScreen from '../pages/productScreen/ProductScreen';
 import ProductDetails from '../pages/productDetails/ProductDetails';
 import LoactionScreen from '../pages/loactionScreen/LoactionScreen';
 import ShoppingCartScreen from '../pages/shoppingCartScreen/ShoppingCartScreen';
 import { CartProvider } from '../services/CartContext';
+import Cart from '../components/Cart';
 
 const Stack = createNativeStackNavigator();
 
@@ -28,15 +28,27 @@ export const SignedInStack = () => {
                         <Stack.Screen
                             name="ProductScreen"
                             component={ProductScreen}
-                            options={{
+                            options={({ navigation }) => ({
                                 title: 'Products',
+                                headerBackVisible: false,
                                 headerTitleStyle: styles.headerTitle,
-                                headerBackVisible: true,
-                                headerRight: () => <Text>Cart</Text>,
-                            }}
+                                headerRight: () => <>
+                                    <Cart title="Cart" onPress={() => navigation.navigate("ShoppingCartScreen")} />
+                                    <Cart title="log" onPress={() => navigation.navigate("Dashboard")} />
+
+                                </>
+                            })}
                         />
-                        <Stack.Screen name="ProductDetails" component={ProductDetails} />
+                        <Stack.Screen name="ProductDetails" component={ProductDetails}
+                            options={({ navigation }) => ({
+                                title: 'Product Details',
+                                headerBackVisible: true,
+                                headerTitleStyle: styles.headerTitle,
+                                headerRight: () => <Cart title="Cart" onPress={() => navigation.navigate("ShoppingCartScreen")} />
+                            })}
+                        />
                         <Stack.Screen name="LoactionScreen" component={LoactionScreen} />
+                        {/* <Stack.Screen name="DashboardButton" component={DashboardButton} /> */}
                         <Stack.Screen name="ShoppingCartScreen" component={ShoppingCartScreen} />
                     </Stack.Navigator>
                 </NavigationContainer>

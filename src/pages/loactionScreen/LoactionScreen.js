@@ -21,10 +21,15 @@ export default LoactionScreen;
 const styles = StyleSheet.create({
     Maplocation: {
         width: "100%",
-        height: "100%"
+        height: "99.9%"
     },
     backButtonContainer: {
-        bottom: 4,
-        marginHorizontal: 10
+        bottom: 20,
+        marginHorizontal: 10,
+        backgroundColor: "#3293fe",
+        borderRadius: 25,
+        padding: 10,
+        marginTop: 30,
+        width: "90%"
     },
 });
