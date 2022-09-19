@@ -1,6 +1,6 @@
 import { StyleSheet, FlatList } from 'react-native';
 import React, { useState, useEffect } from 'react';
-import { Product } from '../../services/ProductsService';
+import { Product } from '../../components/Product';
 import { getProducts } from '../../services/ProductsService';
 
 const ProductScreen = ({ navigation }) => {
@@ -23,13 +23,16 @@ const ProductScreen = ({ navigation }) => {
 
 
     return (
-        <FlatList
-            style={styles.productsList}
-            contentContainerStyle={styles.productsListContainer}
-            keyExtractor={(item) => item.id.toString()}
-            data={products}
-            renderItem={renderProduct}
-        />
+        <>
+
+            <FlatList
+                style={styles.productsList}
+                contentContainerStyle={styles.productsListContainer}
+                keyExtractor={(item) => item.id.toString()}
+                data={products}
+                renderItem={renderProduct}
+            />
+        </>
     );
 };
 

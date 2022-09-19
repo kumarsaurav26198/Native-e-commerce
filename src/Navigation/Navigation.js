@@ -1,6 +1,6 @@
 
 import * as React from 'react';
-import { View, Text } from 'react-native';
+import { StyleSheet, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import SignUp from '../Screens/SignUp';
@@ -19,11 +19,18 @@ export const SignedInStack = () => {
     return (
         <NavigationContainer>
             <Stack.Navigator
-                initialRouteName='Dashboard'
-                screenOptions={screenOptions}
+                initialRouteName='ProductScreen'
+
             >
                 <Stack.Screen name="Dashboard" component={Dashboard} />
-                <Stack.Screen name="ProductScreen" component={ProductScreen} />
+                <Stack.Screen name="ProductScreen" component={ProductScreen}
+                    options={{
+                        title: 'Products',
+                        headerTitleStyle: styles.headerTitle,
+                        // headerBackVisible: true,
+                        headerRight: () => <Text>Cart</Text>,
+                    }}
+                />
                 <Stack.Screen name="ProductDetails" component={ProductDetails} />
             </Stack.Navigator>
         </NavigationContainer>
@@ -46,3 +53,18 @@ export const SignedOutStack = () => {
         </NavigationContainer>
     );
 };
+
+const styles = StyleSheet.create({
+    headerTitle: {
+        fontSize: 20
+    },
+    headerTitleStyle: {
+        fontWeight: 'bold',
+        textAlign: 'center',
+        alignSelf: 'center',
+        color: 'black',
+    },
+    headerStyle: {
+        backgroundColor: '#f4511e',
+    },
+});
