@@ -45,7 +45,6 @@ export default function ProductDetails({ route, navigation }) {
                     <View style={styles.locationContainer}>
                         <CustomButton title={" set Loaction"} onPress={setLoaction} />
                     </View>
-
                 </View>
             </ScrollView>
         </SafeAreaView>
