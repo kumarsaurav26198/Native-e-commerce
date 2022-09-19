@@ -1,7 +1,7 @@
 import { View, Text } from 'react-native';
 import React, { Component, useState } from 'react';
-import TextInputComponent from '../Components/TextInput';
-import Button from '../Components/Button';
+import TextInputComponent from '../components/TextInput';
+import Button from '../components/Button';
 import { TouchableOpacity } from 'react-native';
 import { LoginUser } from '../Firebase/LoginUser';
 import LinearGradient from 'react-native-linear-gradient';

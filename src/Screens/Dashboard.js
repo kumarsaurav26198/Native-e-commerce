@@ -1,6 +1,6 @@
 import { Text, View } from 'react-native';
 import React, { Component } from 'react';
-import Button from '../Components/Button';
+import Button from '../components/Button';
 import { TouchableOpacity } from 'react-native';
 import { auth } from '../Firebase/firebaseConfig';
 import { FlatList } from 'react-native';

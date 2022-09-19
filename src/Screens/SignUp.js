@@ -1,7 +1,7 @@
 import { View, Text } from 'react-native';
 import React, { Component, useState } from 'react';
-import TextInputComponent from '../Components/TextInput';
-import Button from '../Components/Button';
+import TextInputComponent from '../components/TextInput';
+import Button from '../components/Button';
 import { SignUpUser } from '../Firebase/SignUpUser';
 import { AddUser } from '../Firebase/Users';
 import { auth } from '../Firebase/firebaseConfig';

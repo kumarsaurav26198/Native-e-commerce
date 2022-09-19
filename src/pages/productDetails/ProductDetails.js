@@ -7,7 +7,7 @@ import {
     SafeAreaView,
     StyleSheet
 } from 'react-native';
-import CustomButton from '../../Components/common/CustomButton';
+import CustomButton from '../../components/common/CustomButton';
 import { getProduct } from '../../services/ProductsService.js';
 import { CartContext } from '../../services/CartContext';
 
