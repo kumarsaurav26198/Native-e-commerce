@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { useEffect, useState } from 'react';
 import { SignedInStack, SignedOutStack } from './Navigation';
-import { auth } from '../Firebase/firebaseConfig';
+import { auth } from '../firebase/firebaseConfig';
 
 const AuthNavigation = () => {
 

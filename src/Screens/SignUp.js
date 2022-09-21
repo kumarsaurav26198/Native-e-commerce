@@ -2,9 +2,9 @@ import { View, Text } from 'react-native';
 import React, { Component, useState } from 'react';
 import TextInputComponent from '../components/TextInput';
 import Button from '../components/Button';
-import { SignUpUser } from '../Firebase/SignUpUser';
-import { AddUser } from '../Firebase/Users';
-import { auth } from '../Firebase/firebaseConfig';
+import { SignUpUser } from '../firebase/SignUpUser';
+import { AddUser } from '../firebase/Users';
+import { auth } from '../firebase/firebaseConfig';
 
 
 class SignUp extends Component {

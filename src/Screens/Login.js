@@ -3,7 +3,7 @@ import React, { Component, useState } from 'react';
 import TextInputComponent from '../components/TextInput';
 import Button from '../components/Button';
 import { TouchableOpacity } from 'react-native';
-import { LoginUser } from '../Firebase/LoginUser';
+import { LoginUser } from '../firebase/LoginUser';
 import LinearGradient from 'react-native-linear-gradient';
 
 class Login extends Component {
