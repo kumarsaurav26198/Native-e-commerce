@@ -64,19 +64,19 @@ export class Dashboard extends Component {
         // ]
     };
 
-    // async componentDidMount() {
-    //     const db = getDatabase();
-    //     const ref = db.ref('https://chatapp-d8f8f-default-rtdb.firebaseio.com/');
-    //     await ref.on('value', (snapshot) => {
-    //         let users = [];
-    //         snapshot.forEach((child) => {
-    //             users.push({
-    //                 userName: child.val().name,
-    //             });
-    //         });
-    //         this.setState({ allUsers: users })
-    //     })
-    // }
+    async componentDidMount() {
+        const db = getDatabase();
+        const ref = db.ref('https://chatapp-d8f8f-default-rtdb.firebaseio.com/');
+        await ref.on('value', (snapshot) => {
+            let users = [];
+            snapshot.forEach((child) => {
+                users.push({
+                    userName: child.val().name,
+                });
+            });
+            this.setState({ allUsers: users });
+        });
+    }
 
     handleSignOut = async () => {
         try
