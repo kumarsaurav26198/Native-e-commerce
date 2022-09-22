@@ -1,7 +1,7 @@
 import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 import React from 'react';
 
-const CustomButton = ({ onPress, title, onClick }) => {
+const CustomButton = ({ onPress, title, onClick, bgColor, textColor }) => {
     return (
         <TouchableOpacity onPress={onPress} onClick={onClick} style={styles.appButtonContainer}>
             <Text style={styles.appButtonText}>{title}</Text>
@@ -12,12 +12,13 @@ const CustomButton = ({ onPress, title, onClick }) => {
 export default CustomButton;
 
 const styles = StyleSheet.create({
-    // appButtonContainer: {
-    //     elevation: 8,
-    //     backgroundColor: "#009688",
-    //     borderRadius: 10,
-    //     // paddingVertical: 4,
-    // },
+    appButtonContainer: {
+        // backgroundColor: bgColor
+        // elevation: 8,
+        // backgroundColor: bgColor,
+        // borderRadius: 10,
+        // paddingVertical: 4,
+    },
     appButtonText: {
         fontSize: 18,
         color: "#fff",

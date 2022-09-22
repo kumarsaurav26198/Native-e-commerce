@@ -8,20 +8,21 @@ export default function PayCheckout() {
         <TouchableOpacity style={styles.appButtonContainer}
             onPress={() => {
                 var options = {
-                    description: 'Credits towards consultation',
-                    image: 'https://i.imgur.com/3g7nmJC.jpg',
+                    description: 'Credits towards testing',
+                    image: 'https://upwork-usw2-prod-assets-static.s3.us-west-2.amazonaws.com/org-logo/425265062081794048',
                     currency: 'INR',
                     key: 'rzp_test_GNnVef5lCY1FjE',
                     amount: '100',
-                    name: 'Saurav Kumar',
+                    name: 'kaspro',
                     // order_id: 'order_DslnoIgkIDL8Zt',
                     //Replace this with an order_id created using Orders API.
                     prefill: {
                         email: 'kumarsaurav26198@gmail.com',
                         contact: '6202142166',
-                        name: 'Saurav Kumar'
+                        name: 'Saurav Kumar',
+                        address: ""
                     },
-                    theme: { color: '#53a20e' }
+                    theme: { color: '#000' }
                 };
                 RazorpayCheckout.open(options).then((data) => {
                     // handle success

@@ -15,24 +15,22 @@ class Login extends Component {
     LogintoFirebase = () => {
         LoginUser(this.state.email, this.state.password).
             then(() => {
-                alert('LoggedIn successfully');
+                // alert('LoggedIn successfully');
             }).catch((err) => {
                 alert(err);
             });
     };
     render() {
         return (
-            <View style={{ flex: 1 }}>
-                <LinearGradient style={{ flex: 1 }} colors={['rgba(243,124,250, 0.6)', 'rgba(255,186,99, 0.6)']}>
-                    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-                        <TextInputComponent placeholder="Enter Email" updateFields={(text) => this.setState({ email: text })} />
-                        <TextInputComponent placeholder="Enter Password" updateFields={(text) => this.setState({ password: text })} />
-                        <Button title="Login" onPress={() => { this.LogintoFirebase(); }} />
-                        <TouchableOpacity onPress={() => { this.props.navigation.navigate('SignUp'); }}>
-                            <Text style={{ color: '#000', fontSize: 16, fontWeight: 'bold' }}>New User ? Click Here</Text>
-                        </TouchableOpacity>
-                    </View>
-                </LinearGradient>
+            <View style={{ flex: 1, backgroundColor: "#000" }}>
+                <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                    <TextInputComponent placeholder="Enter Email" updateFields={(text) => this.setState({ email: text })} />
+                    <TextInputComponent placeholder="Enter Password" updateFields={(text) => this.setState({ password: text })} />
+                    <Button title="Login" onPress={() => { this.LogintoFirebase(); }} />
+                    <TouchableOpacity onPress={() => { this.props.navigation.navigate('SignUp'); }}>
+                        <Text style={{ color: '#fff', fontSize: 16, fontWeight: 'bold' }}>New User ? Click Here</Text>
+                    </TouchableOpacity>
+                </View>
             </View>
         );
     }

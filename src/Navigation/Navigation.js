@@ -11,6 +11,7 @@ import LoactionScreen from '../pages/loactionScreen/LoactionScreen';
 import ShoppingCartScreen from '../pages/shoppingCartScreen/ShoppingCartScreen';
 import { CartProvider } from '../services/CartContext';
 import Cart from '../components/Cart';
+import BottomTabNavigation from './BottomTabNavigation';
 
 const Stack = createNativeStackNavigator();
 
@@ -23,8 +24,21 @@ export const SignedInStack = () => {
         <>
             <CartProvider>
                 <NavigationContainer>
-                    <Stack.Navigator initialRouteName="ProductScreen">
-                        <Stack.Screen name="Dashboard" component={Dashboard} />
+                    <Stack.Navigator initialRouteName="Home">
+                        <Stack.Screen name="Dashboard" component={Dashboard}
+                            options={() => ({
+                                title: 'Dashboard',
+                                headerBackVisible: false,
+                                headerTitleStyle: styles.headerTitle,
+                            })}
+                        />
+                        <Stack.Screen name="Home" component={BottomTabNavigation}
+                            options={() => ({
+                                title: 'Dashboard',
+                                headerBackVisible: false,
+                                headerTitleStyle: styles.headerTitle,
+                            })}
+                        />
                         <Stack.Screen
                             name="ProductScreen"
                             component={ProductScreen}
@@ -34,8 +48,6 @@ export const SignedInStack = () => {
                                 headerTitleStyle: styles.headerTitle,
                                 headerRight: () => <>
                                     <Cart title="Cart" onPress={() => navigation.navigate("ShoppingCartScreen")} />
-                                    <Cart title="log" onPress={() => navigation.navigate("Dashboard")} />
-
                                 </>
                             })}
                         />
