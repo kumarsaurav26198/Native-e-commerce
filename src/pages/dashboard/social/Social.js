@@ -1,36 +1,42 @@
 import { StyleSheet, Text, View, Button } from 'react-native';
 import React from 'react';
+import SearchInput from '../../../components/common/SearchInput';
+import CustomButton from '../../../components/common/CustomButton';
 
 
 export default function Social({ navigation }) {
     return (
-        <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-            <Text>Social</Text>
-            {/* <View>
+        <>
+            <SearchInput />
+            <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+                <Text>Social</Text>
+                <CustomButton title="Button  Click Me" backgroundColor="red" />
+                {/* <View>
                 <Button
-                    title="Go To ProfileScreen"
-                    onPress={() => navigation.navigate('ProfileScreen')}
+                title="Go To ProfileScreen"
+                onPress={() => navigation.navigate('ProfileScreen')}
                 />
-            </View>
-            <View>
+                </View>
+                <View>
                 <Button
-                    title="Go To HomeScreen"
-                    onPress={() => navigation.navigate('HomeScreen')}
+                title="Go To HomeScreen"
+                onPress={() => navigation.navigate('HomeScreen')}
                 />
-            </View>
-            <View>
+                </View>
+                <View>
                 <Button
-                    title="Go To Account"
-                    onPress={() => navigation.navigate('Account')}
+                title="Go To Account"
+                onPress={() => navigation.navigate('Account')}
                 />
-            </View>
+                </View>
             <View>
-                <Button
+            <Button
                     title="Go To Social"
                     onPress={() => navigation.navigate('Social')}
-                />
-            </View> */}
-        </View>
+                    />
+                </View> */}
+            </View>
+        </>
     );
 }
 

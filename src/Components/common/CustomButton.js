@@ -3,7 +3,7 @@ import React from 'react';
 
 const CustomButton = ({ onPress, title, onClick, bgColor, textColor }) => {
     return (
-        <TouchableOpacity onPress={onPress} onClick={onClick} style={styles.appButtonContainer}>
+        <TouchableOpacity onPress={onPress} onClick={onClick} style={{ backgroundColor: { bgColor } }}>
             <Text style={styles.appButtonText}>{title}</Text>
         </TouchableOpacity>
     );
@@ -13,7 +13,7 @@ export default CustomButton;
 
 const styles = StyleSheet.create({
     appButtonContainer: {
-        // backgroundColor: bgColor
+        // backgroundColor: { bgColor }
         // elevation: 8,
         // backgroundColor: bgColor,
         // borderRadius: 10,

@@ -1,12 +1,14 @@
-import { StyleSheet, FlatList } from 'react-native';
-import React, { useState, useEffect } from 'react';
-import { Product } from '../../components/Product';
-import { getProducts } from '../../services/ProductsService';
+import { StyleSheet, FlatList, View } from 'react-native';
+import { useState, useEffect } from 'react';
+import { getProducts } from '../services/ProductsService';
+import { Product } from '../components/Product';
 
-const ProductScreen = ({ navigation }) => {
+
+export default function ProductContainer({ navigation }) {
     function renderProduct({ item: product }) {
         return (
-            <Product {...product}
+            <Product
+                {...product}
                 onPress={() => {
                     navigation.navigate('ProductDetails', {
                         productId: product.id,
@@ -21,9 +23,8 @@ const ProductScreen = ({ navigation }) => {
         setProducts(getProducts());
     });
 
-
     return (
-        <>
+        <View style={styles.productContainer}>
             <FlatList
                 style={styles.productsList}
                 contentContainerStyle={styles.productsListContainer}
@@ -31,19 +32,23 @@ const ProductScreen = ({ navigation }) => {
                 data={products}
                 renderItem={renderProduct}
             />
-        </>
+        </View>
     );
-};
-
-export default ProductScreen;
+}
 
 const styles = StyleSheet.create({
+    productContainer: {
+        flex: 0.5,
+    },
+
     productsList: {
         backgroundColor: '#eeeeee',
     },
     productsListContainer: {
         backgroundColor: '#eeeeee',
         paddingVertical: 8,
+        paddingHorizontal: 8,
         marginHorizontal: 8,
+        marginVertical: 8,
     },
 });
